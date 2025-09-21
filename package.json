@@ -1,0 +1,21 @@
+{
+  "name": "onsia_homemax",
+  "version": "1.0.0",
+  "description": "프리미엄 부동산 분양을 위한 고성능 랜딩 페이지입니다. 벤치마킹 사이트의 심플한 구조를 기반으로 최신 웹 기술과 부동산 마케팅 전문성을 결합했습니다.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "crawl": "node crawl-images.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.55.0",
+    "dotenv": "^17.2.2",
+    "express": "^4.21.2",
+    "solapi": "^5.5.2"
+  }
+}

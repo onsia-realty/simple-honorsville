@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>클러스터용인 경남아너스빌 | 프리미엄 분양 안내</title>
+    <meta name="description" content="클러스터용인 경남아너스빌 분양 안내. 프리미엄 입지와 설계, 특별 분양가 혜택을 지금 확인하세요.">
+    <meta name="keywords" content="클러스터용인, 경남아너스빌, 용인아파트, 신규분양, 프리미엄아파트">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="클러스터용인 경남아너스빌 | 프리미엄 분양">
+    <meta property="og:description" content="용인 최고의 입지에 들어서는 경남아너스빌. 특별 분양가 혜택을 놓치지 마세요.">
+    <meta property="og:image" content="images/hero/main-visual.jpg">
+    <meta property="og:url" content="https://your-domain.com">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Sticky Header -->
+    <header class="sticky-header" id="stickyHeader">
+        <div class="header-container">
+            <h1 class="logo">경남아너스빌</h1>
+            <nav class="quick-nav">
+                <a href="#overview">개요</a>
+                <a href="#gallery">갤러리</a>
+                <a href="#floorplan">평면도</a>
+                <a href="#location">입지</a>
+            </nav>
+            <button class="header-cta" onclick="scrollToForm()">상담신청</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-content">
+            <img src="images/hero/main-visual.jpg" alt="클러스터용인 경남아너스빌 메인" class="hero-image">
+            <div class="hero-overlay">
+                <h2 class="hero-title">클러스터용인<br><span>경남아너스빌</span></h2>
+                <p class="hero-subtitle">용인의 새로운 프리미엄을 만나다</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToForm()">즉시 상담신청</button>
+                    <a href="tel:1522-8832" class="btn-secondary">📞 1522-8832</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Registration Form -->
+    <section class="form-section" id="form1">
+        <div class="container">
+            <div class="form-header">
+                <h3>관심고객 등록</h3>
+                <p>빠른 상담과 특별 혜택을 받아보세요</p>
+            </div>
+            <form class="registration-form" id="registrationForm1" action="https://formsubmit.co/your-email@example.com" method="POST">
+                <input type="hidden" name="_subject" value="경남아너스빌 상담신청">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="form-group">
+                    <label for="name1">이름 <span class="required">*</span></label>
+                    <input type="text" id="name1" name="name" required placeholder="성함을 입력해주세요">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone1">연락처 <span class="required">*</span></label>
+                    <input type="tel" id="phone1" name="phone" required placeholder="010-0000-0000"
+                           pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" maxlength="13">
+                </div>
+
+                <div class="form-group">
+                    <label for="message1">문의사항</label>
+                    <input type="text" id="message1" name="message" placeholder="ex. 로얄층 문의, 분양가">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacy1" name="privacy" required>
+                    <label for="privacy1">개인정보 수집 및 이용에 동의합니다 <span class="required">*</span></label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">상담 신청하기</span>
+                    <span class="btn-loader" style="display: none;">전송중...</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="content-section" id="overview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h3 class="section-title">프로젝트 개요</h3>
+            </div>
+            <div class="image-grid">
+                <img src="images/gallery/overview-1.jpg" alt="프로젝트 개요 1" class="lazy-image" data-src="images/gallery/overview-1.jpg">
+                <img src="images/gallery/overview-2.jpg" alt="프로젝트 개요 2" class="lazy-image" data-src="images/gallery/overview-2.jpg">
+                <img src="images/gallery/overview-3.jpg" alt="프로젝트 개요 3" class="lazy-image" data-src="images/gallery/overview-3.jpg">
+                <img src="images/gallery/overview-4.jpg" alt="프로젝트 개요 4" class="lazy-image" data-src="images/gallery/overview-4.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="content-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h3 class="section-title">프리미엄 갤러리</h3>
+            </div>
+            <div class="gallery-container">
+                <img src="images/gallery/gallery-1.jpg" alt="갤러리 이미지 1" class="lazy-image gallery-item" data-src="images/gallery/gallery-1.jpg">
+                <img src="images/gallery/gallery-2.jpg" alt="갤러리 이미지 2" class="lazy-image gallery-item" data-src="images/gallery/gallery-2.jpg">
+                <img src="images/gallery/gallery-3.jpg" alt="갤러리 이미지 3" class="lazy-image gallery-item" data-src="images/gallery/gallery-3.jpg">
+                <img src="images/gallery/gallery-4.jpg" alt="갤러리 이미지 4" class="lazy-image gallery-item" data-src="images/gallery/gallery-4.jpg">
+                <img src="images/gallery/gallery-5.jpg" alt="갤러리 이미지 5" class="lazy-image gallery-item" data-src="images/gallery/gallery-5.jpg">
+                <img src="images/gallery/gallery-6.jpg" alt="갤러리 이미지 6" class="lazy-image gallery-item" data-src="images/gallery/gallery-6.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Video Section -->
+    <section class="content-section" id="video">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h3 class="section-title">홍보 영상</h3>
+            </div>
+            <div class="video-container">
+                <div class="youtube-player" data-id="YOUR_YOUTUBE_VIDEO_ID">
+                    <img src="images/video-thumbnail.jpg" alt="홍보 영상 썸네일" class="video-thumbnail">
+                    <button class="play-button" aria-label="Play Video">
+                        <svg width="68" height="48" viewBox="0 0 68 48"><path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floor Plan Section -->
+    <section class="content-section" id="floorplan">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h3 class="section-title">평면도</h3>
+            </div>
+            <div class="floorplan-grid">
+                <div class="floorplan-item" onclick="openModal(this)">
+                    <img src="images/floorplan/type-a.jpg" alt="A타입 평면도" class="lazy-image" data-src="images/floorplan/type-a.jpg">
+                    <p class="floorplan-label">84A 타입</p>
+                </div>
+                <div class="floorplan-item" onclick="openModal(this)">
+                    <img src="images/floorplan/type-b.jpg" alt="B타입 평면도" class="lazy-image" data-src="images/floorplan/type-b.jpg">
+                    <p class="floorplan-label">84B 타입</p>
+                </div>
+                <div class="floorplan-item" onclick="openModal(this)">
+                    <img src="images/floorplan/type-c.jpg" alt="C타입 평면도" class="lazy-image" data-src="images/floorplan/type-c.jpg">
+                    <p class="floorplan-label">101 타입</p>
+                </div>
+                <div class="floorplan-item" onclick="openModal(this)">
+                    <img src="images/floorplan/type-d.jpg" alt="D타입 평면도" class="lazy-image" data-src="images/floorplan/type-d.jpg">
+                    <p class="floorplan-label">115 타입</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Registration Form -->
+    <section class="form-section highlighted" id="form2">
+        <div class="container">
+            <div class="form-header">
+                <h3>지금 바로 상담 받으세요!</h3>
+                <p>한정된 물량, 특별한 혜택을 놓치지 마세요</p>
+            </div>
+            <form class="registration-form" id="registrationForm2" action="https://formsubmit.co/your-email@example.com" method="POST">
+                <input type="hidden" name="_subject" value="경남아너스빌 긴급 상담신청">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="form-group">
+                    <label for="name2">이름 <span class="required">*</span></label>
+                    <input type="text" id="name2" name="name" required placeholder="성함을 입력해주세요">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone2">연락처 <span class="required">*</span></label>
+                    <input type="tel" id="phone2" name="phone" required placeholder="010-0000-0000"
+                           pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" maxlength="13">
+                </div>
+
+                <div class="form-group">
+                    <label for="message2">문의사항</label>
+                    <input type="text" id="message2" name="message" placeholder="ex. 로얄층 문의, 분양가">
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacy2" name="privacy" required>
+                    <label for="privacy2">개인정보 수집 및 이용에 동의합니다 <span class="required">*</span></label>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">상담 신청하기</span>
+                    <span class="btn-loader" style="display: none;">전송중...</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="content-section" id="location">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h3 class="section-title">프리미엄 입지</h3>
+            </div>
+            <div class="location-images">
+                <img src="images/location/location-1.jpg" alt="입지 안내 1" class="lazy-image" data-src="images/location/location-1.jpg">
+                <img src="images/location/location-2.jpg" alt="교통 안내" class="lazy-image" data-src="images/location/location-2.jpg">
+                <img src="images/location/location-3.jpg" alt="주변 환경" class="lazy-image" data-src="images/location/location-3.jpg">
+                <img src="images/location/location-4.jpg" alt="생활 인프라" class="lazy-image" data-src="images/location/location-4.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info Section -->
+    <section class="content-section" id="additional">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h3 class="section-title">특별 혜택</h3>
+            </div>
+            <div class="info-images">
+                <img src="images/info/benefit-1.jpg" alt="특별 혜택 1" class="lazy-image" data-src="images/info/benefit-1.jpg">
+                <img src="images/info/benefit-2.jpg" alt="특별 혜택 2" class="lazy-image" data-src="images/info/benefit-2.jpg">
+                <img src="images/info/benefit-3.jpg" alt="특별 혜택 3" class="lazy-image" data-src="images/info/benefit-3.jpg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-title">클러스터용인 경남아너스빌</p>
+                <p class="footer-tel">대표전화: <a href="tel:1522-8832">1522-8832</a></p>
+                <p class="footer-info">※ 본 홍보물은 편의를 위해 제작된 것으로 실제와 다를 수 있습니다.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:1522-8832" class="float-btn phone-btn" aria-label="전화 상담">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+            </svg>
+        </a>
+        <button class="float-btn form-btn" onclick="scrollToForm()" aria-label="상담 신청">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1z"/>
+            </svg>
+        </button>
+        <a href="https://pf.kakao.com/_YourKakaoChannel" class="float-btn kakao-btn" target="_blank" aria-label="카카오톡 상담">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M12 3c5.799 0 10.5 3.664 10.5 8.185 0 4.52-4.701 8.184-10.5 8.184a13.5 13.5 0 01-1.727-.11l-4.408 2.883c-.501.265-.678.236-.472-.413l.892-3.678c-2.88-1.46-4.785-3.99-4.785-6.866C1.5 6.665 6.201 3 12 3zm5.907 8.06l1.47-1.424a.472.472 0 00-.656-.678l-1.928 1.866V9.282a.472.472 0 00-.944 0v2.557a.471.471 0 00.471.472h.701a.472.472 0 000-.944h-.252l1.138-1.308zm-5.836 1.252h-.701a.472.472 0 000 .944h.701a.472.472 0 000-.944zm1.003-.944h.7a.472.472 0 000-.944h-.7a.472.472 0 000 .944zm-3.499.944h-.7a.472.472 0 000 .944h.7a.472.472 0 000-.944zm-.7-2.359h.7a.472.472 0 000-.944h-.7a.472.472 0 000 .944z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Modal for Image Zoom -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" alt="확대 이미지">
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <p class="toast-message"></p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/lazy-load.js" defer></script>
+</body>
+</html>

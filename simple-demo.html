@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클러스터용인 경남아너스빌</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #fff;
+            line-height: 1.5;
+        }
+
+        /* 메인 컨테이너 - 중앙정렬, 최대 너비 제한 */
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 이미지 섹션 */
+        .image-section {
+            width: 100%;
+            background: #fff;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 폼 섹션 스타일 */
+        .form-section {
+            background: #fff;
+            padding: 50px 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 30px;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            background: white;
+        }
+
+        .form-group input::placeholder {
+            color: #999;
+        }
+
+        .required {
+            color: red;
+        }
+
+        /* 개인정보 동의 */
+        .privacy-box {
+            border: 1px solid #ddd;
+            height: 100px;
+            overflow-y: auto;
+            padding: 10px;
+            background: white;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+        }
+
+        .checkbox-group label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* 제출 버튼 */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #1a5490;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .submit-btn:hover {
+            background: #144070;
+        }
+
+        /* 유튜브 영상 */
+        .video-section {
+            width: 100%;
+            background: #000;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 모바일 반응형 */
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            .form-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 메인 이미지 1 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&h=1080&fit=crop&q=80" alt="메인 이미지">
+        </div>
+
+        <!-- 이미지 2 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=800&fit=crop&q=80" alt="프로젝트 소개">
+        </div>
+
+        <!-- 관심고객등록 폼 1 -->
+        <div class="form-section">
+            <div class="form-container">
+                <h3 class="form-title">관심고객 등록</h3>
+                <form>
+                    <div class="form-group">
+                        <label>이름<span class="required">*</span></label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>연락처<span class="required">*</span></label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label>문의사항</label>
+                        <input type="text" placeholder="ex.로얄층 문의, 분양가">
+                    </div>
+                    <div class="privacy-box">
+                        <p><strong>개인정보 수집 및 이용 동의</strong></p>
+                        <p>1. 수집항목 : 이름, 연락처</p>
+                        <p>2. 수집 및 이용목적 : 분양 상담 및 안내</p>
+                        <p>3. 보유 및 이용기간 : 수집일로부터 1년</p>
+                        <p>4. 귀하는 동의를 거부할 권리가 있으며, 동의 거부시 상담 서비스 이용이 제한될 수 있습니다.</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree1" required>
+                        <label for="agree1">개인정보 수집 및 이용에 동의합니다</label>
+                    </div>
+                    <button type="submit" class="submit-btn">제출하기</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 이미지 3 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1920&h=800&fit=crop&q=80" alt="외관 이미지">
+        </div>
+
+        <!-- 이미지 4 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1920&h=800&fit=crop&q=80" alt="내부 이미지">
+        </div>
+
+        <!-- 유튜브 영상 (썸네일로 표시) -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920&h=1080&fit=crop&q=80" alt="영상 썸네일" style="cursor: pointer;" onclick="this.parentElement.innerHTML='<div class=\'video-container\'><iframe src=\'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1\' allowfullscreen></iframe></div>'">
+        </div>
+
+        <!-- 이미지 5 - 평면도 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?w=1920&h=800&fit=crop&q=80" alt="평면도">
+        </div>
+
+        <!-- 이미지 6 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&h=800&fit=crop&q=80" alt="단지 배치도">
+        </div>
+
+        <!-- 관심고객등록 폼 2 (반복) -->
+        <div class="form-section">
+            <div class="form-container">
+                <h3 class="form-title">관심고객 등록</h3>
+                <form>
+                    <div class="form-group">
+                        <label>이름<span class="required">*</span></label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>연락처<span class="required">*</span></label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label>문의사항</label>
+                        <input type="text" placeholder="ex.로얄층 문의, 분양가">
+                    </div>
+                    <div class="privacy-box">
+                        <p><strong>개인정보 수집 및 이용 동의</strong></p>
+                        <p>1. 수집항목 : 이름, 연락처</p>
+                        <p>2. 수집 및 이용목적 : 분양 상담 및 안내</p>
+                        <p>3. 보유 및 이용기간 : 수집일로부터 1년</p>
+                        <p>4. 귀하는 동의를 거부할 권리가 있으며, 동의 거부시 상담 서비스 이용이 제한될 수 있습니다.</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree2" required>
+                        <label for="agree2">개인정보 수집 및 이용에 동의합니다</label>
+                    </div>
+                    <button type="submit" class="submit-btn">제출하기</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 이미지 7 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&h=800&fit=crop&q=80" alt="입지 안내">
+        </div>
+
+        <!-- 이미지 8 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&h=800&fit=crop&q=80" alt="교통 안내">
+        </div>
+
+        <!-- 이미지 9 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1567360425618-1594206637d2?w=1920&h=800&fit=crop&q=80" alt="생활 인프라">
+        </div>
+
+        <!-- 이미지 10 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?w=1920&h=800&fit=crop&q=80" alt="주변 환경">
+        </div>
+
+        <!-- 이미지 11 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=1920&h=800&fit=crop&q=80" alt="프리미엄 시설">
+        </div>
+
+        <!-- 이미지 12 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1920&h=800&fit=crop&q=80" alt="커뮤니티 시설">
+        </div>
+
+        <!-- 이미지 13 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1920&h=800&fit=crop&q=80" alt="브랜드 소개">
+        </div>
+
+        <!-- 이미지 14 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1565538420870-da08ff96a207?w=1920&h=800&fit=crop&q=80" alt="시공사 소개">
+        </div>
+
+        <!-- 관심고객등록 폼 3 (마지막) -->
+        <div class="form-section">
+            <div class="form-container">
+                <h3 class="form-title">관심고객 등록</h3>
+                <form>
+                    <div class="form-group">
+                        <label>이름<span class="required">*</span></label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>연락처<span class="required">*</span></label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label>문의사항</label>
+                        <input type="text" placeholder="ex.로얄층 문의, 분양가">
+                    </div>
+                    <div class="privacy-box">
+                        <p><strong>개인정보 수집 및 이용 동의</strong></p>
+                        <p>1. 수집항목 : 이름, 연락처</p>
+                        <p>2. 수집 및 이용목적 : 분양 상담 및 안내</p>
+                        <p>3. 보유 및 이용기간 : 수집일로부터 1년</p>
+                        <p>4. 귀하는 동의를 거부할 권리가 있으며, 동의 거부시 상담 서비스 이용이 제한될 수 있습니다.</p>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree3" required>
+                        <label for="agree3">개인정보 수집 및 이용에 동의합니다</label>
+                    </div>
+                    <button type="submit" class="submit-btn">제출하기</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 마지막 이미지 -->
+        <div class="image-section">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1920&h=800&fit=crop&q=80" alt="연락처 안내">
+        </div>
+    </div>
+
+    <script>
+        // 폼 제출 처리
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('관심고객 등록이 완료되었습니다.\n빠른 시일 내에 연락드리겠습니다.');
+                this.reset();
+            });
+        });
+
+        // 전화번호 자동 포맷
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/[^0-9]/g, '');
+                let formatted = '';
+
+                if (value.length > 0) {
+                    if (value.length <= 3) {
+                        formatted = value;
+                    } else if (value.length <= 7) {
+                        formatted = value.slice(0, 3) + '-' + value.slice(3);
+                    } else {
+                        formatted = value.slice(0, 3) + '-' + value.slice(3, 7) + '-' + value.slice(7, 11);
+                    }
+                }
+                e.target.value = formatted;
+            });
+        });
+    </script>
+</body>
+</html>

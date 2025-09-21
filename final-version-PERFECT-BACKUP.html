@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO 메타 태그 -->
+    <title>클러스터용인 경남아너스빌 | 분양 안내</title>
+    <meta name="description" content="클러스터용인 경남아너스빌 분양 안내. 프리미엄 입지와 설계, 특별 분양가 혜택을 지금 확인하세요.">
+    <meta name="keywords" content="클러스터용인, 경남아너스빌, 용인아파트, 신규분양, 프리미엄아파트, 용인분양">
+
+    <!-- Open Graph 태그 (카카오톡, 페이스북 공유시) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="클러스터용인 경남아너스빌">
+    <meta property="og:description" content="용인 최고의 입지에 들어서는 경남아너스빌. 특별 분양가 혜택을 놓치지 마세요.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&h=630&fit=crop&q=80">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', 'Segoe UI', sans-serif;
+            background: #fff;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* 메인 컨테이너 */
+        .wrapper {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 이미지 섹션 - 전체 너비 */
+        .img-section {
+            width: 100%;
+            background: #f5f5f5; /* 이미지 로딩 전 배경색 */
+            position: relative;
+        }
+
+        .img-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /* 이미지 로딩 최적화 */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        /* 메인 히어로 섹션 */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .hero-section img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        /* 히어로 오버레이 */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-title {
+            color: white;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+        .hero-title span {
+            color: #FFD700;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(255,215,0,0.5);
+            font-weight: 900;
+            display: block;
+            transform: scale(1.1);
+        }
+
+        .hero-subtitle {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .hero-cta {
+            padding: 1rem 2.5rem;
+            background: #ff6b35;
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+        }
+
+        .hero-cta:hover {
+            background: #ff5722;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,107,53,0.4);
+        }
+
+        /* 폼 섹션 */
+        .form-section {
+            background: #fff;
+            padding: 60px 20px;
+        }
+
+        .form-wrap {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 40px 35px;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 26px;
+            color: #212529;
+            margin-bottom: 35px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        /* 폼 그룹 */
+        .form-row {
+            margin-bottom: 22px;
+        }
+
+        .form-row label {
+            display: block;
+            margin-bottom: 8px;
+            color: #495057;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .form-row input {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #ced4da;
+            font-size: 15px;
+            background: white;
+            transition: border-color 0.2s;
+        }
+
+        .form-row input:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        .form-row input::placeholder {
+            color: #adb5bd;
+        }
+
+        .star {
+            color: #dc3545;
+            font-weight: normal;
+        }
+
+        /* 개인정보 동의 영역 */
+        .privacy-area {
+            border: 1px solid #dee2e6;
+            height: 110px;
+            overflow-y: auto;
+            padding: 15px;
+            background: white;
+            font-size: 13px;
+            color: #6c757d;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .privacy-area::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .privacy-area::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .privacy-area::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 3px;
+        }
+
+        .privacy-area strong {
+            color: #495057;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* 체크박스 */
+        .check-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .check-wrap input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .check-wrap label {
+            font-size: 14px;
+            color: #495057;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* 제출 버튼 */
+        .submit-button {
+            width: 100%;
+            padding: 16px;
+            background: #0066cc;
+            color: white;
+            border: none;
+            font-size: 17px;
+            cursor: pointer;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+
+        .submit-button:hover {
+            background: #0052a3;
+        }
+
+        .submit-button:active {
+            transform: translateY(1px);
+        }
+
+        .submit-button:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .submit-button:disabled:hover {
+            background: #6c757d;
+        }
+
+        /* 유튜브 영상 컨테이너 */
+        .video-wrapper {
+            width: 100%;
+            background: #000;
+        }
+
+        .video-box {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 클릭 가능한 비디오 썸네일 */
+        .video-thumb {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .video-thumb::after {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 30px;
+            transition: background 0.2s;
+        }
+
+        .video-thumb:hover::after {
+            background: rgba(255, 0, 0, 0.9);
+        }
+
+        /* scrollToForm 함수용 스타일 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 모바일 최적화 */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .hero-cta {
+                font-size: 1rem;
+                padding: 0.8rem 2rem;
+            }
+
+            .hero-section img {
+                height: 100vh;
+            }
+            .form-section {
+                padding: 40px 15px;
+            }
+
+            .form-wrap {
+                padding: 30px 20px;
+            }
+
+            .form-title {
+                font-size: 22px;
+                margin-bottom: 25px;
+            }
+
+            .form-row {
+                margin-bottom: 18px;
+            }
+
+            .form-row input {
+                padding: 12px;
+                font-size: 16px; /* iOS 줌 방지 */
+            }
+
+            .submit-button {
+                font-size: 16px;
+            }
+        }
+
+        /* 아주 작은 화면 */
+        @media (max-width: 360px) {
+            .form-wrap {
+                padding: 25px 15px;
+            }
+
+            .form-title {
+                font-size: 20px;
+            }
+        }
+
+        /* 로딩 애니메이션 (선택사항) */
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        .loading {
+            animation: pulse 1.5s ease-in-out infinite;
+            background: #e9ecef;
+        }
+
+        /* 대표번호 섹션 */
+        .contact-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #3b82f6 100%);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .contact-wrap {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-title {
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 40px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.5px;
+        }
+
+        .phone-info {
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .phone-label {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .phone-number {
+            font-size: 42px;
+            color: #FFD700;
+            font-weight: 900;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            letter-spacing: 2px;
+        }
+
+        .phone-number:hover {
+            color: #FFF;
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+
+        .contact-desc {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 16px;
+            margin: 0;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .phone-number {
+                font-size: 28px;
+                letter-spacing: 1px;
+            }
+
+            .contact-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- ======= 메인 이미지 1 ======= -->
+        <div class="img-section hero-section">
+            <img src="crawled-images/Generated Image September 21, 2025 - 2_14PM.png"
+                 alt="클러스터용인 경남아너스빌 메인">
+            <div class="hero-overlay">
+                <h2 class="hero-title">클러스터용인<br><span>경남아너스빌</span></h2>
+                <p class="hero-subtitle">시간을 초월한 아름다움이 깃든 곳, 꿈이 현실이 되는 특별한 공간</p>
+                <button class="hero-cta" onclick="scrollToForm()">신비로운 여정을 시작하세요</button>
+            </div>
+        </div>
+
+        <!-- ======= 유튜브 영상 (클릭시 재생) ======= -->
+        <div class="img-section video-thumb" onclick="loadVideo(this)">
+            <img src="https://img.youtube.com/vi/YWB5Yy6LOmg/maxresdefault.jpg"
+                 alt="홍보 영상" data-video="YWB5Yy6LOmg">
+        </div>
+
+        <!-- ======= 관심고객 등록 폼 1 ======= -->
+        <div class="form-section">
+            <div class="form-wrap">
+                <h2 class="form-title">관심고객 등록</h2>
+                <form id="form1" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <label>이름<span class="star">*</span></label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label>연락처<span class="star">*</span></label>
+                        <input type="tel" name="phone" required
+                               placeholder="010-0000-0000"
+                               maxlength="13">
+                    </div>
+
+
+                    <div class="privacy-area">
+                        <strong>개인정보 수집 및 이용 동의</strong>
+                        <p>1. 수집항목 : 이름, 연락처, 문의사항</p>
+                        <p>2. 수집 및 이용목적 : 분양 상담 서비스 제공, 계약 관련 안내</p>
+                        <p>3. 보유 및 이용기간 : 수집일로부터 1년 또는 분양 완료시까지</p>
+                        <p>4. 귀하는 개인정보 수집 및 이용 동의를 거부할 권리가 있으며, 동의 거부시 상담 서비스 이용이 제한될 수 있습니다.</p>
+                    </div>
+
+                    <div class="check-wrap">
+                        <input type="checkbox" id="privacy1" required>
+                        <label for="privacy1">개인정보 수집 및 이용에 동의합니다</label>
+                    </div>
+
+                    <button type="submit" class="submit-button">제출하기</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- ======= 외관 이미지 3 ======= -->
+        <div class="img-section">
+            <img src="crawled-images/image_03.jpg"
+                 alt="아파트 외관">
+        </div>
+
+        <!-- ======= 내부 이미지 4 ======= -->
+        <div class="img-section">
+            <img src="crawled-images/image_04.jpg"
+                 alt="실내 인테리어">
+        </div>
+
+        <!-- ======= 평면도 이미지 5 ======= -->
+        <div class="img-section">
+            <img src="crawled-images/image_05.jpg"
+                 alt="평면도 안내">
+        </div>
+
+        <!-- ======= 단지배치도 이미지 6 ======= -->
+        <div class="img-section">
+            <img src="crawled-images/image_06.jpg"
+                 alt="단지 배치도">
+        </div>
+
+        <!-- ======= 양지지도 ======= -->
+        <div class="img-section">
+            <img src="crawled-images/양지지도.png"
+                 alt="양지지도 - 위치 안내">
+        </div>
+
+        <!-- ======= 입지 안내 이미지 7-10 ======= -->
+        <div class="img-section">
+            <img src="crawled-images/image_07.png"
+                 alt="입지 안내">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_08.png"
+                 alt="교통 안내">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_09.jpg"
+                 alt="생활 인프라">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_10.jpg"
+                 alt="주변 환경">
+        </div>
+
+        <!-- ======= 프리미엄 시설 이미지 11-13 ======= -->
+        <div class="img-section">
+            <img src="crawled-images/image_11.jpeg"
+                 alt="프리미엄 시설">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_12.jpg"
+                 alt="커뮤니티 시설">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_13.jpeg"
+                 alt="조경 계획">
+        </div>
+
+        <!-- ======= 브랜드/시공사 이미지 14-15 ======= -->
+        <div class="img-section">
+            <img src="crawled-images/Generated Image September 21, 2025 - 2_26PM.png"
+                 alt="브랜드 소개">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_15.jpg"
+                 alt="시공사 소개">
+        </div>
+
+        <!-- ======= 관심고객 등록 폼 3 (마지막) ======= -->
+        <div class="form-section">
+            <div class="form-wrap">
+                <h2 class="form-title">관심고객 등록</h2>
+                <form id="form3" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <label>이름<span class="star">*</span></label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label>연락처<span class="star">*</span></label>
+                        <input type="tel" name="phone" required
+                               placeholder="010-0000-0000"
+                               maxlength="13">
+                    </div>
+
+
+                    <div class="privacy-area">
+                        <strong>개인정보 수집 및 이용 동의</strong>
+                        <p>1. 수집항목 : 이름, 연락처, 문의사항</p>
+                        <p>2. 수집 및 이용목적 : 분양 상담 서비스 제공, 계약 관련 안내</p>
+                        <p>3. 보유 및 이용기간 : 수집일로부터 1년 또는 분양 완료시까지</p>
+                        <p>4. 귀하는 개인정보 수집 및 이용 동의를 거부할 권리가 있으며, 동의 거부시 상담 서비스 이용이 제한될 수 있습니다.</p>
+                    </div>
+
+                    <div class="check-wrap">
+                        <input type="checkbox" id="privacy3" required>
+                        <label for="privacy3">개인정보 수집 및 이용에 동의합니다</label>
+                    </div>
+
+                    <button type="submit" class="submit-button">제출하기</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- ======= 추가 분양 안내 이미지들 ======= -->
+        <div class="img-section">
+            <img src="crawled-images/00-2_1758429285333.jpg"
+                 alt="분양 안내 1">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/10-1_1758429285381.jpg"
+                 alt="분양 안내 2">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/19_1758429284879.jpg"
+                 alt="분양 안내 3">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/20_1758429284938.jpg"
+                 alt="분양 안내 4">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/21_1758429284989.jpg"
+                 alt="분양 안내 5">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/22_1758429285024.jpg"
+                 alt="분양 안내 6">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/23_1758429285050.jpg"
+                 alt="분양 안내 7">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/24_1758429285080.jpg"
+                 alt="분양 안내 8">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/25_1758429285111.jpg"
+                 alt="분양 안내 9">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/26_1758429285154.jpg"
+                 alt="분양 안내 10">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/27_1758429285197.jpg"
+                 alt="분양 안내 11">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/28_1758429285243.jpg"
+                 alt="분양 안내 12">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/29_1758429285275.jpg"
+                 alt="분양 안내 13">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_31.jpeg"
+                 alt="최종 분양 안내 1">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_32.jpeg"
+                 alt="최종 분양 안내 2">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_33.png"
+                 alt="최종 분양 안내 3">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_34.jpg"
+                 alt="최종 분양 안내 4">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_35.jpg"
+                 alt="최종 분양 안내 5">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_36.jpeg"
+                 alt="최종 분양 안내 6">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/image_37.png"
+                 alt="최종 분양 안내 7">
+        </div>
+
+        <!-- ======= 대표번호 섹션 ======= -->
+        <div class="contact-section">
+            <div class="contact-wrap">
+                <h2 class="contact-title">문의 및 상담</h2>
+                <div class="phone-info">
+                    <p class="phone-label">대표번호</p>
+                    <a href="tel:1668-5257" class="phone-number">1668-5257</a>
+                </div>
+                <p class="contact-desc">평일 09:00 ~ 18:00 | 토요일 10:00 ~ 17:00</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // 폼으로 스크롤
+        function scrollToForm() {
+            const firstForm = document.querySelector('.form-section');
+            if (firstForm) {
+                firstForm.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // 폼 제출 처리
+        async function handleSubmit(event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+
+            // 입력 값 검증
+            if (!name || !phone) {
+                alert('이름과 연락처를 입력해주세요.');
+                return;
+            }
+
+            // 제출 버튼 비활성화
+            const submitButton = form.querySelector('.submit-button');
+            const originalText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = '전송 중...';
+
+            try {
+                // SMS API 호출
+                const response = await fetch('/api/send-sms', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        phone: phone
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert('관심고객 등록이 완료되었습니다.\nSMS 알림이 발송되었습니다.\n빠른 시일 내에 담당자가 연락드리겠습니다.\n감사합니다.');
+                    form.reset();
+                } else {
+                    console.error('SMS 발송 실패:', result.error);
+                    alert('등록이 완료되었지만 SMS 발송에 실패했습니다.\n직접 1668-5257로 연락주시기 바랍니다.');
+                }
+
+            } catch (error) {
+                console.error('폼 제출 오류:', error);
+                alert('등록 중 오류가 발생했습니다.\n1668-5257로 직접 연락주시기 바랍니다.');
+            } finally {
+                // 제출 버튼 복원
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        }
+
+        // 전화번호 자동 포맷팅
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function(e) {
+                // 숫자만 추출
+                let value = e.target.value.replace(/[^0-9]/g, '');
+                let formatted = '';
+
+                // 하이픈 자동 삽입
+                if (value.length > 0) {
+                    if (value.length <= 3) {
+                        formatted = value;
+                    } else if (value.length <= 7) {
+                        formatted = value.slice(0, 3) + '-' + value.slice(3);
+                    } else {
+                        formatted = value.slice(0, 3) + '-' + value.slice(3, 7) + '-' + value.slice(7, 11);
+                    }
+                }
+
+                e.target.value = formatted;
+            });
+
+            // 숫자만 입력 허용
+            input.addEventListener('keypress', function(e) {
+                const char = String.fromCharCode(e.which);
+                if (!/[0-9]/.test(char) && e.which !== 8 && e.which !== 46) {
+                    e.preventDefault();
+                }
+            });
+        });
+
+        // 유튜브 영상 로드 (클릭시)
+        function loadVideo(element) {
+            const img = element.querySelector('img');
+            const videoId = img.getAttribute('data-video') || 'YWB5Yy6LOmg';
+
+            // 영상 iframe으로 교체
+            element.innerHTML = `
+                <div class="video-box">
+                    <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=0&rel=0&controls=1"
+                            allowfullscreen
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
+                </div>
+            `;
+            element.classList.remove('video-thumb');
+        }
+
+        // 이미지 지연 로딩 (선택사항)
+        if ('IntersectionObserver' in window) {
+            const images = document.querySelectorAll('.img-section img');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        // 실제 구현시 data-src 속성 활용
+                        img.classList.remove('loading');
+                        observer.unobserve(img);
+                    }
+                });
+            }, {
+                rootMargin: '50px'
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        }
+    </script>
+</body>
+</html>

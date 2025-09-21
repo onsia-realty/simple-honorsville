@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클러스터용인 경남아너스빌</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', sans-serif;
+            background: #fff;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 이미지 섹션 */
+        .img-section {
+            width: 100%;
+            background: #f5f5f5;
+            position: relative;
+        }
+
+        .img-section img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 폼 섹션 */
+        .form-section {
+            background: #fff;
+            padding: 60px 20px;
+        }
+
+        .form-wrap {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 40px 35px;
+        }
+
+        .form-title {
+            text-align: center;
+            font-size: 26px;
+            color: #212529;
+            margin-bottom: 35px;
+            font-weight: 700;
+        }
+
+        .form-row {
+            margin-bottom: 22px;
+        }
+
+        .form-row label {
+            display: block;
+            margin-bottom: 8px;
+            color: #495057;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .form-row input {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #ced4da;
+            font-size: 15px;
+            background: white;
+            transition: border-color 0.2s;
+        }
+
+        .form-row input:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        .star {
+            color: #dc3545;
+        }
+
+        .privacy-area {
+            border: 1px solid #dee2e6;
+            height: 110px;
+            overflow-y: auto;
+            padding: 15px;
+            background: white;
+            font-size: 13px;
+            color: #6c757d;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .check-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .check-wrap input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 16px;
+            background: #0066cc;
+            color: white;
+            border: none;
+            font-size: 17px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background 0.2s;
+        }
+
+        .submit-button:hover {
+            background: #0052a3;
+        }
+
+        /* 모바일 반응형 */
+        @media (max-width: 768px) {
+            .form-section {
+                padding: 40px 15px;
+            }
+
+            .form-wrap {
+                padding: 30px 20px;
+            }
+
+            .form-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- 메인 이미지 1 -->
+        <div class="img-section">
+            <img src="crawled-images/%EB%A9%94%EC%9D%B81522-8832_1758429284169.png" alt="메인 이미지">
+        </div>
+
+        <!-- 이미지 2 -->
+        <div class="img-section">
+            <img src="crawled-images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_28-7-2025_14142__1758429284291.jpeg" alt="프로젝트 소개">
+        </div>
+
+        <!-- 관심고객 등록 폼 1 -->
+        <div class="form-section">
+            <div class="form-wrap">
+                <h2 class="form-title">관심고객 등록</h2>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <label>이름<span class="star">*</span></label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label>연락처<span class="star">*</span></label>
+                        <input type="tel" name="phone" required
+                               placeholder="010-0000-0000" maxlength="13">
+                    </div>
+
+                    <div class="form-row">
+                        <label>문의사항</label>
+                        <input type="text" name="message"
+                               placeholder="ex.로얄층 문의, 분양가">
+                    </div>
+
+                    <div class="privacy-area">
+                        <strong>개인정보 수집 및 이용 동의</strong>
+                        <p>1. 수집항목 : 이름, 연락처, 문의사항</p>
+                        <p>2. 수집 및 이용목적 : 분양 상담 서비스 제공</p>
+                        <p>3. 보유 및 이용기간 : 수집일로부터 1년</p>
+                        <p>4. 동의를 거부할 권리가 있으며, 거부시 상담 서비스가 제한됩니다.</p>
+                    </div>
+
+                    <div class="check-wrap">
+                        <input type="checkbox" id="privacy1" required>
+                        <label for="privacy1">개인정보 수집 및 이용에 동의합니다</label>
+                    </div>
+
+                    <button type="submit" class="submit-button">제출하기</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 이미지 3-7 -->
+        <div class="img-section">
+            <img src="crawled-images/vvvv_1758429284397.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/63_1758429284410.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/vv_1758429284418.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/vvv_1758429284428.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/%EA%B4%80%EA%B3%A0%EB%8B%A4%EB%A5%B8%EB%B2%84%EC%A0%841_1758429284438.png" alt="관심고객 안내">
+        </div>
+
+        <!-- 관심고객 등록 폼 2 -->
+        <div class="form-section">
+            <div class="form-wrap">
+                <h2 class="form-title">관심고객 등록</h2>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <label>이름<span class="star">*</span></label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label>연락처<span class="star">*</span></label>
+                        <input type="tel" name="phone" required
+                               placeholder="010-0000-0000" maxlength="13">
+                    </div>
+
+                    <div class="form-row">
+                        <label>문의사항</label>
+                        <input type="text" name="message"
+                               placeholder="ex.로얄층 문의, 분양가">
+                    </div>
+
+                    <div class="privacy-area">
+                        <strong>개인정보 수집 및 이용 동의</strong>
+                        <p>1. 수집항목 : 이름, 연락처, 문의사항</p>
+                        <p>2. 수집 및 이용목적 : 분양 상담 서비스 제공</p>
+                        <p>3. 보유 및 이용기간 : 수집일로부터 1년</p>
+                        <p>4. 동의를 거부할 권리가 있으며, 거부시 상담 서비스가 제한됩니다.</p>
+                    </div>
+
+                    <div class="check-wrap">
+                        <input type="checkbox" id="privacy2" required>
+                        <label for="privacy2">개인정보 수집 및 이용에 동의합니다</label>
+                    </div>
+
+                    <button type="submit" class="submit-button">제출하기</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 이미지 8-13 -->
+        <div class="img-section">
+            <img src="crawled-images/63_1758429284445.png" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/000000_1758429284456.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/Screenshot-2025-07-28-at-00.51.13_1758429284474.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_28-7-2025_14234__1758429284488.jpeg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/5-1_1758429284604.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_28-7-2025_14125__1758429284623.jpeg" alt="이미지">
+        </div>
+
+        <!-- 이미지 14-25 -->
+        <div class="img-section">
+            <img src="crawled-images/3333_1758429284800.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/0_1758429284846.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/19_1758429284879.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/20_1758429284938.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/21_1758429284989.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/22_1758429285024.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/23_1758429285050.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/24_1758429285080.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/25_1758429285111.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/6_1758429285137.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/26_1758429285154.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/27_1758429285197.jpg" alt="이미지">
+        </div>
+
+        <!-- 관심고객 등록 폼 3 -->
+        <div class="form-section">
+            <div class="form-wrap">
+                <h2 class="form-title">관심고객 등록</h2>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <label>이름<span class="star">*</span></label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label>연락처<span class="star">*</span></label>
+                        <input type="tel" name="phone" required
+                               placeholder="010-0000-0000" maxlength="13">
+                    </div>
+
+                    <div class="form-row">
+                        <label>문의사항</label>
+                        <input type="text" name="message"
+                               placeholder="ex.로얄층 문의, 분양가">
+                    </div>
+
+                    <div class="privacy-area">
+                        <strong>개인정보 수집 및 이용 동의</strong>
+                        <p>1. 수집항목 : 이름, 연락처, 문의사항</p>
+                        <p>2. 수집 및 이용목적 : 분양 상담 서비스 제공</p>
+                        <p>3. 보유 및 이용기간 : 수집일로부터 1년</p>
+                        <p>4. 동의를 거부할 권리가 있으며, 거부시 상담 서비스가 제한됩니다.</p>
+                    </div>
+
+                    <div class="check-wrap">
+                        <input type="checkbox" id="privacy3" required>
+                        <label for="privacy3">개인정보 수집 및 이용에 동의합니다</label>
+                    </div>
+
+                    <button type="submit" class="submit-button">제출하기</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 나머지 이미지들 -->
+        <div class="img-section">
+            <img src="crawled-images/28_1758429285243.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/29_1758429285275.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/36_1758429285310.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/3333_1758429284800.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/00-2_1758429285333.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/10-1_1758429285381.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_28-7-2025_14212__1758429285413.jpeg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_28-7-2025_14157__1758429285675.jpeg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/1300_1758429285785.png" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/vvvvvv_1758429285848.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/31_1758429285873.jpg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_28-7-2025_14223__1758429285890.jpeg" alt="이미지">
+        </div>
+
+        <div class="img-section">
+            <img src="crawled-images/%EA%B4%80%EA%B3%A0%EB%8B%A4%EB%A5%B8%EB%B2%84%EC%A0%84_1758429285987.png" alt="마지막 안내">
+        </div>
+
+    </div>
+
+    <script>
+        // 폼 제출 처리
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('관심고객 등록이 완료되었습니다.\n빠른 시일 내에 담당자가 연락드리겠습니다.');
+            event.target.reset();
+        }
+
+        // 전화번호 자동 포맷팅
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/[^0-9]/g, '');
+                let formatted = '';
+
+                if (value.length > 0) {
+                    if (value.length <= 3) {
+                        formatted = value;
+                    } else if (value.length <= 7) {
+                        formatted = value.slice(0, 3) + '-' + value.slice(3);
+                    } else {
+                        formatted = value.slice(0, 3) + '-' + value.slice(3, 7) + '-' + value.slice(7, 11);
+                    }
+                }
+                e.target.value = formatted;
+            });
+        });
+    </script>
+</body>
+</html>

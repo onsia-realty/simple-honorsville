@@ -1,0 +1,487 @@
+/* ===========================
+   Responsive Design Styles
+=========================== */
+
+/* Tablet - Large (1024px and below) */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-title span {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .image-grid,
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .floorplan-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet - Small (768px and below) */
+@media (max-width: 768px) {
+    /* Header */
+    .header-container {
+        padding: 0.75rem 1rem;
+    }
+
+    .quick-nav {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .header-cta {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 80vh;
+        min-height: 500px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-title span {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 200px;
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Sections */
+    .content-section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-number {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 0.9rem;
+    }
+
+    /* Forms */
+    .form-section {
+        padding: 3rem 0;
+    }
+
+    .form-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .form-header p {
+        font-size: 1rem;
+    }
+
+    .registration-form {
+        padding: 1.5rem;
+    }
+
+    /* Grids */
+    .image-grid,
+    .gallery-container {
+        gap: 1rem;
+    }
+
+    .image-grid img,
+    .gallery-item {
+        height: 250px;
+    }
+
+    /* Floating Buttons */
+    .floating-buttons {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .float-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .float-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Mobile - Large (640px and below) */
+@media (max-width: 640px) {
+    /* Typography */
+    body {
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-title span {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Sections */
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    /* Grids - Single Column */
+    .image-grid,
+    .gallery-container,
+    .floorplan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floorplan-item img {
+        height: 200px;
+    }
+
+    /* Form */
+    .registration-form {
+        padding: 1.25rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="tel"] {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .submit-btn {
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-title {
+        font-size: 1.25rem;
+    }
+
+    .footer-tel {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile - Small (480px and below) */
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero-section {
+        height: 70vh;
+        min-height: 450px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .hero-title span {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 160px;
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Content Sections */
+    .content-section {
+        padding: 2.5rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+    }
+
+    /* Forms */
+    .form-section {
+        padding: 2.5rem 0;
+    }
+
+    .form-header h3 {
+        font-size: 1.35rem;
+    }
+
+    .form-header p {
+        font-size: 0.9rem;
+    }
+
+    .registration-form {
+        padding: 1rem;
+    }
+
+    /* Images */
+    .image-grid img,
+    .gallery-item {
+        height: 200px;
+    }
+
+    /* Modal */
+    .modal-close {
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 2rem;
+    }
+
+    /* Floating Buttons */
+    .floating-buttons {
+        bottom: 1rem;
+        right: 1rem;
+        gap: 0.75rem;
+    }
+
+    .float-btn {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Mobile - Extra Small (360px and below) */
+@media (max-width: 360px) {
+    /* Hero */
+    .hero-title {
+        font-size: 1.35rem;
+    }
+
+    .hero-title span {
+        font-size: 1.5rem;
+    }
+
+    /* Sections */
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    /* Forms */
+    .checkbox-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero-section {
+        height: 100vh;
+        min-height: auto;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-title span {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* High Resolution Displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    /* Sharper borders and shadows for retina displays */
+    .form-group input[type="text"],
+    .form-group input[type="tel"] {
+        border-width: 1px;
+    }
+
+    .form-group input:focus {
+        box-shadow: 0 0 0 2px rgba(26, 84, 144, 0.15);
+    }
+}
+
+/* Print Styles */
+@media print {
+    /* Hide unnecessary elements */
+    .progress-bar,
+    .sticky-header,
+    .floating-buttons,
+    .modal,
+    .toast,
+    .hero-buttons,
+    .header-cta,
+    .submit-btn {
+        display: none !important;
+    }
+
+    /* Optimize for print */
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .content-section {
+        padding: 2rem 0;
+        page-break-inside: avoid;
+    }
+
+    .image-grid,
+    .gallery-container,
+    .floorplan-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .form-section {
+        background: white !important;
+        color: black !important;
+    }
+
+    .form-header {
+        color: black !important;
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #ecf0f1;
+        --text-light: #bdc3c7;
+        --background-light: #2c3e50;
+        --border-color: #34495e;
+    }
+
+    body {
+        background-color: #1a1a1a;
+        color: #ecf0f1;
+    }
+
+    .sticky-header {
+        background: rgba(26, 26, 26, 0.98);
+    }
+
+    .registration-form {
+        background: #2c3e50;
+        color: #ecf0f1;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="tel"] {
+        background: #34495e;
+        color: #ecf0f1;
+        border-color: #34495e;
+    }
+
+    .floorplan-item img {
+        background: #34495e;
+    }
+
+    .footer {
+        background: #1a1a1a;
+    }
+}
