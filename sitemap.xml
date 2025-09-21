@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+    <!-- 메인 페이지 -->
+    <url>
+        <loc>https://simple-honorsville.vercel.app/</loc>
+        <lastmod>2025-09-21</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://simple-honorsville.vercel.app/crawled-images/Generated Image September 21, 2025 - 2_14PM.png</image:loc>
+            <image:title>클러스터용인 경남아너스빌 메인</image:title>
+            <image:caption>6500세대 미니신도시 양지지구 클러스터용인 경남아너스빌</image:caption>
+        </image:image>
+    </url>
+
+    <!-- 최종 버전 페이지 -->
+    <url>
+        <loc>https://simple-honorsville.vercel.app/final-version.html</loc>
+        <lastmod>2025-09-21</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://simple-honorsville.vercel.app/crawled-images/Generated Image September 21, 2025 - 2_14PM.png</image:loc>
+            <image:title>클러스터용인 경남아너스빌 분양 안내</image:title>
+            <image:caption>반도체 클러스터와 함께하는 프리미엄 아파트</image:caption>
+        </image:image>
+        <news:news>
+            <news:publication>
+                <news:name>클러스터용인 경남아너스빌</news:name>
+                <news:language>ko</news:language>
+            </news:publication>
+            <news:publication_date>2025-09-21</news:publication_date>
+            <news:title>클러스터용인 경남아너스빌 분양 시작</news:title>
+            <news:keywords>클러스터용인, 경남아너스빌, 용인아파트, 분양, 양지지구, 미니신도시</news:keywords>
+        </news:news>
+    </url>
+
+    <!-- RSS 피드 -->
+    <url>
+        <loc>https://simple-honorsville.vercel.app/rss.xml</loc>
+        <lastmod>2025-09-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- 이미지 갤러리 페이지들 -->
+    <url>
+        <loc>https://simple-honorsville.vercel.app/crawled-images/양지지도.png</loc>
+        <lastmod>2025-09-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://simple-honorsville.vercel.app/crawled-images/양지지도.png</image:loc>
+            <image:title>양지지구 지도</image:title>
+            <image:caption>양지지구 위치 및 교통 안내</image:caption>
+        </image:image>
+    </url>
+
+    <!-- 주요 이미지들 -->
+    <url>
+        <loc>https://simple-honorsville.vercel.app/crawled-images/image_01.png</loc>
+        <lastmod>2025-09-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <image:image>
+            <image:loc>https://simple-honorsville.vercel.app/crawled-images/image_01.png</image:loc>
+            <image:title>클러스터용인 경남아너스빌 외관</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://simple-honorsville.vercel.app/crawled-images/image_02.jpeg</loc>
+        <lastmod>2025-09-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <image:image>
+            <image:loc>https://simple-honorsville.vercel.app/crawled-images/image_02.jpeg</image:loc>
+            <image:title>클러스터용인 경남아너스빌 조감도</image:title>
+        </image:image>
+    </url>
+
+    <url>
+        <loc>https://simple-honorsville.vercel.app/crawled-images/image_03.jpg</loc>
+        <lastmod>2025-09-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <image:image>
+            <image:loc>https://simple-honorsville.vercel.app/crawled-images/image_03.jpg</image:loc>
+            <image:title>클러스터용인 경남아너스빌 단지 내부</image:title>
+        </image:image>
+    </url>
+
+</urlset>

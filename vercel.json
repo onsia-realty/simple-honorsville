@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "blog/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "crawled-images/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.xml",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.txt",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/final-version.html"
+    },
+    {
+      "src": "/blog/(.*)",
+      "dest": "/blog/$1"
+    },
+    {
+      "src": "/crawled-images/(.*)",
+      "dest": "/crawled-images/$1"
+    },
+    {
+      "src": "/(.*\\.(xml|txt|html|css|js|png|jpg|jpeg|gif|svg))",
+      "dest": "/$1"
+    }
+  ]
+}

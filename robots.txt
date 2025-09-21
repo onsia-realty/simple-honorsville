@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# RSS Feed
+Allow: /rss.xml
+
+# Sitemap
+Sitemap: https://simple-honorsville.vercel.app/sitemap.xml
+
+# Block crawling of admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Allow common files
+Allow: /crawled-images/
+Allow: *.css
+Allow: *.js
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+
+# Crawl-delay (optional - 1 second between requests)
+Crawl-delay: 1

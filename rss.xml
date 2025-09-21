@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>클러스터용인 경남아너스빌 분양 소식</title>
+        <description>6500세대 미니신도시 양지지구 클러스터용인 경남아너스빌 최신 분양 정보와 소식을 전해드립니다.</description>
+        <link>https://simple-honorsville.vercel.app</link>
+        <atom:link href="https://simple-honorsville.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+        <language>ko-KR</language>
+        <pubDate>Sat, 21 Sep 2025 00:00:00 GMT</pubDate>
+        <lastBuildDate>Sat, 21 Sep 2025 00:00:00 GMT</lastBuildDate>
+        <generator>클러스터용인 경남아너스빌</generator>
+        <webMaster>onsia.realty@example.com (클러스터용인 경남아너스빌)</webMaster>
+        <copyright>Copyright 2025 클러스터용인 경남아너스빌</copyright>
+        <category>부동산/분양</category>
+        <ttl>1440</ttl>
+
+        <item>
+            <title>클러스터용인 경남아너스빌 분양 시작</title>
+            <description><![CDATA[
+                반도체 클러스터와 함께하는 6500세대 미니신도시 양지지구에 위치한 클러스터용인 경남아너스빌 분양이 시작되었습니다.
+                프리미엄 입지와 설계로 특별 분양가 혜택을 제공합니다. 지금 바로 문의하세요!
+
+                주요 특징:
+                - 6500세대 미니신도시 양지지구 위치
+                - 반도체 클러스터 연계 개발
+                - 프리미엄 아파트 설계
+                - 특별 분양가 혜택
+
+                문의: 1668-5257
+            ]]></description>
+            <link>https://simple-honorsville.vercel.app/final-version.html</link>
+            <guid>https://simple-honorsville.vercel.app/final-version.html</guid>
+            <pubDate>Sat, 21 Sep 2025 00:00:00 GMT</pubDate>
+            <category>분양정보</category>
+            <author>onsia.realty@example.com (클러스터용인 경남아너스빌)</author>
+            <enclosure url="https://simple-honorsville.vercel.app/crawled-images/Generated Image September 21, 2025 - 2_14PM.png" type="image/png" length="1000000"/>
+        </item>
+
+        <item>
+            <title>양지지구 미니신도시 개발 소식</title>
+            <description><![CDATA[
+                용인시 양지지구가 6500세대 규모의 미니신도시로 개발됩니다.
+                반도체 클러스터와 연계된 이번 개발로 지역 발전이 기대됩니다.
+
+                개발 계획:
+                - 총 6500세대 규모
+                - 반도체 클러스터 연계
+                - 프리미엄 주거단지 조성
+                - 우수한 교통 접근성
+
+                문의: 1668-5257
+            ]]></description>
+            <link>https://simple-honorsville.vercel.app</link>
+            <guid>https://simple-honorsville.vercel.app/news-2</guid>
+            <pubDate>Fri, 20 Sep 2025 00:00:00 GMT</pubDate>
+            <category>개발소식</category>
+            <author>onsia.realty@example.com (클러스터용인 경남아너스빌)</author>
+        </item>
+
+        <item>
+            <title>경남아너스빌 특별 분양가 혜택 안내</title>
+            <description><![CDATA[
+                클러스터용인 경남아너스빌에서 특별 분양가 혜택을 제공합니다.
+                이번 기회를 놓치지 마시고 지금 바로 문의해보세요.
+
+                혜택 내용:
+                - 특별 분양가 적용
+                - 프리미엄 설계
+                - 우수한 입지 조건
+                - 빠른 입주 가능
+
+                문의 및 상담: 1668-5257
+                카카오톡 문의: https://open.kakao.com/o/sen4dWJh
+            ]]></description>
+            <link>https://simple-honorsville.vercel.app</link>
+            <guid>https://simple-honorsville.vercel.app/news-3</guid>
+            <pubDate>Thu, 19 Sep 2025 00:00:00 GMT</pubDate>
+            <category>분양혜택</category>
+            <author>onsia.realty@example.com (클러스터용인 경남아너스빌)</author>
+        </item>
+    </channel>
+</rss>
