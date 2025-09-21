@@ -3,8 +3,8 @@
     <channel>
         <title>클러스터용인 경남아너스빌 분양 소식</title>
         <description>6500세대 미니신도시 양지지구 클러스터용인 경남아너스빌 최신 분양 정보와 소식을 전해드립니다.</description>
-        <link>https://simple-honorsville.vercel.app</link>
-        <atom:link href="https://simple-honorsville.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+        <link>https://onsiasimplehonorsville.vercel.app</link>
+        <atom:link href="https://onsiasimplehonorsville.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
         <language>ko-KR</language>
         <pubDate>Sat, 21 Sep 2025 00:00:00 GMT</pubDate>
         <lastBuildDate>Sat, 21 Sep 2025 00:00:00 GMT</lastBuildDate>
@@ -28,12 +28,12 @@
 
                 문의: 1668-5257
             ]]></description>
-            <link>https://simple-honorsville.vercel.app/final-version.html</link>
-            <guid>https://simple-honorsville.vercel.app/final-version.html</guid>
+            <link>https://onsiasimplehonorsville.vercel.app/final-version.html</link>
+            <guid>https://onsiasimplehonorsville.vercel.app/final-version.html</guid>
             <pubDate>Sat, 21 Sep 2025 00:00:00 GMT</pubDate>
             <category>분양정보</category>
             <author>onsia.realty@example.com (클러스터용인 경남아너스빌)</author>
-            <enclosure url="https://simple-honorsville.vercel.app/crawled-images/Generated Image September 21, 2025 - 2_14PM.png" type="image/png" length="1000000"/>
+            <enclosure url="https://onsiasimplehonorsville.vercel.app/crawled-images/Generated Image September 21, 2025 - 2_14PM.png" type="image/png" length="1000000"/>
         </item>
 
         <item>
@@ -50,8 +50,8 @@
 
                 문의: 1668-5257
             ]]></description>
-            <link>https://simple-honorsville.vercel.app</link>
-            <guid>https://simple-honorsville.vercel.app/news-2</guid>
+            <link>https://onsiasimplehonorsville.vercel.app</link>
+            <guid>https://onsiasimplehonorsville.vercel.app/news-2</guid>
             <pubDate>Fri, 20 Sep 2025 00:00:00 GMT</pubDate>
             <category>개발소식</category>
             <author>onsia.realty@example.com (클러스터용인 경남아너스빌)</author>
@@ -72,8 +72,8 @@
                 문의 및 상담: 1668-5257
                 카카오톡 문의: https://open.kakao.com/o/sen4dWJh
             ]]></description>
-            <link>https://simple-honorsville.vercel.app</link>
-            <guid>https://simple-honorsville.vercel.app/news-3</guid>
+            <link>https://onsiasimplehonorsville.vercel.app</link>
+            <guid>https://onsiasimplehonorsville.vercel.app/news-3</guid>
             <pubDate>Thu, 19 Sep 2025 00:00:00 GMT</pubDate>
             <category>분양혜택</category>
             <author>onsia.realty@example.com (클러스터용인 경남아너스빌)</author>
