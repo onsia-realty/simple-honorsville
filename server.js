@@ -15,14 +15,20 @@ app.use(express.json());
 // Serve static files from the current directory
 app.use(express.static(__dirname));
 
+// Serve blog directory
+app.use('/blog', express.static(path.join(__dirname, 'blog')));
+
 // Serve crawled images
 app.use('/crawled-images', express.static(path.join(__dirname, 'crawled-images')));
 
 // SMS API 라우트
 app.post('/api/send-sms', sendSMS);
 
+// 이미지 생성 모듈
+const imageGenerator = require('./image-generator');
+
 // 블로그 포스트 생성 API
-app.post('/api/create-post', (req, res) => {
+app.post('/api/create-post', async (req, res) => {
     try {
         const { title, description, keywords, category, content, fileName } = req.body;
 

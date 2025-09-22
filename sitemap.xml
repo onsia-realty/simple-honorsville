@@ -93,4 +93,25 @@
         </image:image>
     </url>
 
+    <url>
+        <loc>https://simple-honorsville.vercel.app/blog/121312-269986.html</loc>
+        <lastmod>2025-09-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://simple-honorsville.vercel.app/blog/test-post-123.html</loc>
+        <lastmod>2025-09-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://simple-honorsville.vercel.app/blog/test-post-123.html</loc>
+        <lastmod>2025-09-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>

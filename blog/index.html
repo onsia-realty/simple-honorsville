@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 - 클러스터용인 경남아너스빌</title>
+    <meta name="description" content="클러스터용인 경남아너스빌 분양 정보와 부동산 시장 분석 블로그">
+    <meta name="keywords" content="용인부동산, 양지지구, 반도체클러스터, 아파트분양, 경남아너스빌">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="블로그 - 클러스터용인 경남아너스빌">
+    <meta property="og:description" content="최신 부동산 정보와 분양 소식을 전해드립니다">
+    <meta property="og:image" content="../crawled-images/Generated Image September 21, 2025 - 2_14PM.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f5f5, #e8f4f8);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a472a, #2c5530);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .nav {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav a {
+            color: #1a472a;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #ffd700;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #1a472a, #2c5530);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 60px;
+        }
+
+        .blog-card-content {
+            padding: 25px;
+        }
+
+        .blog-card h2 {
+            color: #1a472a;
+            font-size: 20px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .blog-card-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .blog-card-excerpt {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .blog-card-link {
+            display: inline-block;
+            color: #1a472a;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 20px;
+            background: #ffd700;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .blog-card-link:hover {
+            background: #ffed4a;
+            transform: translateX(5px);
+        }
+
+        .write-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #ffd700;
+            color: #1a472a;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .write-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .footer {
+            background: #1a472a;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>클러스터용인 경남아너스빌 블로그</h1>
+        <p>최신 부동산 정보와 개발 소식을 전해드립니다</p>
+    </div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <div>
+                <a href="../final-version.html">🏠 홈</a>
+                <a href="../blog/">📝 블로그</a>
+                <a href="#contact">📞 문의</a>
+            </div>
+            <div>
+                <strong>☎️ 1668-5257</strong>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 style="color: #1a472a; margin-bottom: 20px;">📚 최신 블로그 글</h2>
+
+        <div class="blog-grid" id="blogGrid">
+            <!-- 블로그 카드들이 여기에 동적으로 로드됩니다 -->
+        </div>
+    </div>
+
+    <a href="../blog-writer.html" class="write-btn">✍️ 글쓰기</a>
+
+    <div class="footer">
+        <p>© 2025 클러스터용인 경남아너스빌. All rights reserved.</p>
+        <p style="margin-top: 10px;">
+            📞 문의: 1668-5257 |
+            <a href="https://open.kakao.com/o/sen4dWJh">💬 카톡 문의</a>
+        </p>
+    </div>
+
+    <script>
+        // 서버에서 블로그 포스트 목록 가져오기
+        async function fetchBlogPosts() {
+            const grid = document.getElementById('blogGrid');
+
+            try {
+                const response = await fetch('/api/posts');
+                if (response.ok) {
+                    const posts = await response.json();
+
+                    // 실제 작성된 포스트만 표시
+                    if (posts.length > 0) {
+                        posts.forEach(post => {
+                            if (!post.fileName.includes('index')) {
+                                const card = document.createElement('div');
+                                card.className = 'blog-card';
+                                // .html 확장자 확인 및 추가
+                                const fileName = post.fileName.endsWith('.html') ? post.fileName : `${post.fileName}.html`;
+                                card.onclick = () => window.location.href = fileName;
+
+                                // 제목에서 이모지 선택
+                                let emoji = '📄';
+                                if (post.title.includes('양지') || post.title.includes('개발')) emoji = '🏗️';
+                                else if (post.title.includes('반도체') || post.title.includes('클러스터')) emoji = '💻';
+                                else if (post.title.includes('교통') || post.title.includes('인프라')) emoji = '🚄';
+                                else if (post.title.includes('분양') || post.title.includes('아파트')) emoji = '🏢';
+
+                                card.innerHTML = `
+                                    <div class="blog-card-image">
+                                        ${emoji}
+                                    </div>
+                                    <div class="blog-card-content">
+                                        <h2>${post.title}</h2>
+                                        <div class="blog-card-date">${post.created}</div>
+                                        <div class="blog-card-excerpt">클릭하여 자세한 내용을 확인하세요</div>
+                                        <a href="${fileName}" class="blog-card-link">자세히 읽기 →</a>
+                                    </div>
+                                `;
+
+                                grid.appendChild(card);
+                            }
+                        });
+                    } else {
+                        // 작성된 글이 없을 때
+                        grid.innerHTML = `
+                            <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
+                                <h3 style="color: #666; margin-bottom: 20px;">아직 작성된 블로그 글이 없습니다.</h3>
+                                <p style="color: #888; margin-bottom: 30px;">첫 번째 블로그 글을 작성해보세요!</p>
+                                <a href="../blog-writer.html" class="blog-card-link">✍️ 글쓰기</a>
+                            </div>
+                        `;
+                    }
+                }
+            } catch (error) {
+                // 서버 연결 실패 시 로컬 파일 체크
+                console.log('API 연결 실패, 직접 파일 체크');
+
+                // 실제 존재하는 파일들만 표시
+                // 현재는 API를 통해서만 실제 작성된 글을 가져옴
+                const existingPosts = [];
+
+                for (const post of existingPosts) {
+                    try {
+                        const checkResponse = await fetch(post.file, { method: 'HEAD' });
+                        if (checkResponse.ok) {
+                            const card = document.createElement('div');
+                            card.className = 'blog-card';
+                            card.onclick = () => window.location.href = post.file;
+
+                            card.innerHTML = `
+                                <div class="blog-card-image">
+                                    ${post.emoji}
+                                </div>
+                                <div class="blog-card-content">
+                                    <h2>${post.title}</h2>
+                                    <div class="blog-card-date">2025년 9월</div>
+                                    <div class="blog-card-excerpt">클릭하여 자세한 내용을 확인하세요</div>
+                                    <a href="${post.file}" class="blog-card-link">자세히 읽기 →</a>
+                                </div>
+                            `;
+
+                            grid.appendChild(card);
+                        }
+                    } catch (e) {
+                        // 파일이 없으면 표시하지 않음
+                    }
+                }
+            }
+        }
+
+        // 페이지 로드 시 실행
+        fetchBlogPosts();
+    </script>
+</body>
+</html>

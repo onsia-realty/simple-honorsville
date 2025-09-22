@@ -420,14 +420,11 @@
                         <label for="content">✍️ 내용 (HTML 모드)</label>
 
                         <div class="editor-toolbar">
-                            <button type="button" class="toolbar-btn" onclick="insertHTML('<h2>', '</h2>')">H2 제목</button>
-                            <button type="button" class="toolbar-btn" onclick="insertHTML('<h3>', '</h3>')">H3 소제목</button>
-                            <button type="button" class="toolbar-btn" onclick="insertHTML('<p><strong>', '</strong></p>')">굵게</button>
-                            <button type="button" class="toolbar-btn" onclick="insertHTML('<p>', '</p>')">문단</button>
-                            <button type="button" class="toolbar-btn" onclick="insertHTML('<ul><li>', '</li></ul>')">목록</button>
-                            <button type="button" class="toolbar-btn" onclick="insertHTML('<a href=\"URL\">', '</a>')">링크</button>
-                            <button type="button" class="toolbar-btn special" onclick="insertCTABox()">CTA 박스</button>
-                            <button type="button" class="toolbar-btn special" onclick="insertHighlightBox()">하이라이트</button>
+                            <input type="file" id="imageUpload" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+                            <button type="button" class="toolbar-btn special" onclick="document.getElementById('imageUpload').click()">🖼️ 이미지 업로드</button>
+                            <button type="button" class="toolbar-btn" onclick="insertImageURL()">🔗 이미지 URL</button>
+                            <button type="button" class="toolbar-btn" onclick="toggleHTMLMode()">📝 HTML 모드</button>
+                            <button type="button" class="toolbar-btn special" onclick="insertCTABox()">📢 CTA 박스</button>
                         </div>
 
                         <textarea id="content" name="content" class="content-editor" placeholder="여기에 HTML 형식으로 내용을 작성하세요...
@@ -481,7 +478,72 @@
     </div>
 
     <script>
-        // HTML 삽입 함수
+        // 이미지 업로드 처리
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            // 파일 크기 체크 (10MB 제한)
+            if (file.size > 10 * 1024 * 1024) {
+                showNotification('파일 크기는 10MB 이하여야 합니다.', 'error');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imgTag = `\n<img src="${e.target.result}" alt="${file.name.replace(/\.[^/.]+$/, '')}" style="width: 100%; max-width: 800px; margin: 20px auto; display: block;">\n`;
+                insertAtCursor(imgTag);
+                showNotification('이미지가 삽입되었습니다!', 'success');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // 이미지 URL 삽입
+        function insertImageURL() {
+            const url = prompt('이미지 URL을 입력하세요:\n(예: https://example.com/image.jpg)');
+            if (url) {
+                const imgTag = `\n<img src="${url}" alt="이미지" style="width: 100%; max-width: 800px; margin: 20px auto; display: block;">\n`;
+                insertAtCursor(imgTag);
+                showNotification('이미지 URL이 삽입되었습니다!', 'success');
+            }
+        }
+
+        // HTML 모드 토글
+        function toggleHTMLMode() {
+            const textarea = document.getElementById('content');
+            const currentMode = textarea.getAttribute('data-mode') || 'html';
+
+            if (currentMode === 'html') {
+                // 비주얼 모드로 전환
+                showPreview();
+                showNotification('미리보기 모드가 활성화되었습니다', 'success');
+            } else {
+                // HTML 모드로 전환
+                const preview = document.getElementById('preview');
+                if (preview) {
+                    preview.style.display = 'none';
+                }
+                textarea.setAttribute('data-mode', 'html');
+                showNotification('HTML 편집 모드로 전환되었습니다', 'success');
+            }
+        }
+
+        // 커서 위치에 텍스트 삽입
+        function insertAtCursor(text) {
+            const textarea = document.getElementById('content');
+            const start = textarea.selectionStart;
+            const end = textarea.selectionEnd;
+            const value = textarea.value;
+
+            textarea.value = value.substring(0, start) + text + value.substring(end);
+
+            // 커서를 삽입된 텍스트 끝으로 이동
+            const newPosition = start + text.length;
+            textarea.setSelectionRange(newPosition, newPosition);
+            textarea.focus();
+        }
+
+        // 기존 HTML 삽입 함수 (호환성 유지)
         function insertHTML(before, after) {
             const textarea = document.getElementById('content');
             const start = textarea.selectionStart;
@@ -569,15 +631,22 @@
             const description = document.getElementById('description').value;
             const keywords = document.getElementById('keywords').value;
             const category = document.getElementById('category').value;
-            const content = document.getElementById('content').value;
+            let content = document.getElementById('content').value;
 
             if (!title || !description || !content) {
                 showNotification('제목, 설명, 내용은 필수 입력 항목입니다.', 'error');
                 return;
             }
 
-            // 파일명 생성
-            const fileName = generateFileName(title);
+            // 티스토리 특수 마크업을 일반 HTML로 변환
+            content = cleanTistoryMarkup(content);
+
+            // 수정 모드 확인
+            const publishBtn = document.querySelector('button[onclick="publishPost()"]');
+            const editMode = publishBtn?.getAttribute('data-edit-mode');
+
+            // 파일명 결정 (수정 모드면 기존 파일명 사용)
+            const fileName = editMode ? editMode.replace('.html', '') : generateFileName(title);
 
             const postData = {
                 title: title,
@@ -600,15 +669,20 @@
                 const result = await response.json();
 
                 if (result.success) {
-                    showNotification(`포스트가 성공적으로 발행되었습니다!`, 'success');
+                    const action = editMode ? '수정' : '발행';
+                    showNotification(`포스트가 성공적으로 ${action}되었습니다!`, 'success');
 
                     // 새 탭에서 생성된 포스트 열기
                     setTimeout(() => {
                         window.open(result.url, '_blank');
                     }, 1000);
 
-                    // 폼 초기화
+                    // 폼 초기화 및 수정 모드 해제
                     clearForm();
+                    if (publishBtn) {
+                        publishBtn.textContent = '🚀 발행하기';
+                        publishBtn.removeAttribute('data-edit-mode');
+                    }
 
                     // 포스트 목록 새로고침
                     loadPosts();
@@ -617,8 +691,35 @@
                 }
             } catch (error) {
                 console.error('발행 오류:', error);
-                showNotification('발행 중 오류가 발생했습니다.', 'error');
+                showNotification('발행 중 오류가 발생했습니다. 콘솔을 확인하세요.', 'error');
             }
+        }
+
+        // 티스토리 마크업 정리 함수
+        function cleanTistoryMarkup(content) {
+            // 티스토리 이미지 그리드 마크업 처리
+            content = content.replace(/\[##_ImageGrid\|(.*?)\|_##\]/g, function(match, p1) {
+                const images = p1.split(',');
+                let html = '<div class="image-grid">';
+                images.forEach(img => {
+                    const imgMatch = img.match(/kage@[^?]+/);
+                    if (imgMatch) {
+                        html += `<img src="/crawled-images/placeholder.png" alt="이미지" style="width: 49%; margin: 5px;">`;
+                    }
+                });
+                html += '</div>';
+                return html;
+            });
+
+            // 티스토리 이미지 마크업 처리
+            content = content.replace(/\[##_Image\|(.*?)\|_##\]/g, function(match, p1) {
+                return `<img src="/crawled-images/placeholder.png" alt="이미지" style="width: 100%;">`;
+            });
+
+            // data-ke-size 속성 제거
+            content = content.replace(/\s*data-ke-[a-z-]+="[^"]*"/g, '');
+
+            return content;
         }
 
         // 임시 저장 함수
@@ -662,6 +763,60 @@
             updateCharCounter('description', 160);
         }
 
+        // 포스트 수정 함수
+        async function editPost(fileName) {
+            try {
+                const response = await fetch(`/blog/${fileName}`);
+                const html = await response.text();
+
+                // HTML 파싱해서 content 추출
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+
+                // 제목과 메타 정보 추출
+                const title = doc.querySelector('title')?.textContent || '';
+                const description = doc.querySelector('meta[name="description"]')?.content || '';
+                const keywords = doc.querySelector('meta[name="keywords"]')?.content || '';
+
+                // article 내용 추출
+                const article = doc.querySelector('.article');
+                let content = '';
+                if (article) {
+                    // meta와 breadcrumb 제거하고 실제 콘텐츠만 추출
+                    const metaDiv = article.querySelector('.meta');
+                    if (metaDiv) metaDiv.remove();
+
+                    // 내부 HTML 가져오기
+                    content = article.innerHTML.trim();
+
+                    // h1 제목 제거 (이미 title 필드에 있음)
+                    content = content.replace(/<h1[^>]*>.*?<\/h1>/i, '').trim();
+                }
+
+                // 폼에 데이터 채우기
+                document.getElementById('title').value = title;
+                document.getElementById('description').value = description;
+                document.getElementById('keywords').value = keywords;
+                document.getElementById('category').value = '일반';
+                document.getElementById('content').value = content;
+
+                // 수정 모드 표시
+                const publishBtn = document.querySelector('button[onclick="publishPost()"]');
+                if (publishBtn) {
+                    publishBtn.textContent = '📝 수정 완료';
+                    publishBtn.setAttribute('data-edit-mode', fileName);
+                }
+
+                showNotification(`"${title}" 글을 수정 모드로 불러왔습니다.`, 'success');
+
+                // 화면 상단으로 스크롤
+                window.scrollTo(0, 0);
+            } catch (error) {
+                console.error('포스트 로드 오류:', error);
+                showNotification('포스트를 불러오는 중 오류가 발생했습니다.', 'error');
+            }
+        }
+
         // 포스트 목록 로드
         async function loadPosts() {
             try {
@@ -683,6 +838,8 @@
                         </div>
                         <div class="post-actions">
                             <button class="btn btn-small btn-primary" onclick="viewPost('${post.fileName}')">보기</button>
+                            <button class="btn btn-small" style="background: #28a745;" onclick="editPost('${post.fileName}')">✏️ 수정</button>
+                            <button class="btn btn-small" style="background: #6c757d;" onclick="viewSource('${post.fileName}')">📝 소스</button>
                         </div>
                     </div>
                 `).join('');
@@ -695,6 +852,126 @@
         // 포스트 보기
         function viewPost(fileName) {
             window.open(`/blog/${fileName}.html`, '_blank');
+        }
+
+        // HTML 소스 보기
+        async function viewSource(fileName) {
+            try {
+                const response = await fetch(`/blog/${fileName}`);
+                const html = await response.text();
+
+                // 새 창 열기
+                const newWindow = window.open('', '_blank');
+                newWindow.document.write(`
+                    <!DOCTYPE html>
+                    <html lang="ko">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>HTML 소스 - ${fileName}</title>
+                        <style>
+                            body {
+                                margin: 0;
+                                padding: 20px;
+                                background: #1e1e1e;
+                                color: #d4d4d4;
+                                font-family: 'Consolas', 'Courier New', monospace;
+                            }
+                            .header {
+                                background: #2d2d2d;
+                                padding: 15px;
+                                margin: -20px -20px 20px -20px;
+                                border-bottom: 1px solid #3e3e3e;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            }
+                            .header h2 {
+                                margin: 0;
+                                color: #fff;
+                                font-size: 18px;
+                            }
+                            .copy-btn {
+                                background: #007acc;
+                                color: white;
+                                border: none;
+                                padding: 8px 20px;
+                                border-radius: 4px;
+                                cursor: pointer;
+                                font-size: 14px;
+                            }
+                            .copy-btn:hover {
+                                background: #005a9e;
+                            }
+                            pre {
+                                background: #2d2d2d;
+                                padding: 20px;
+                                border-radius: 4px;
+                                overflow-x: auto;
+                                white-space: pre-wrap;
+                                word-wrap: break-word;
+                                line-height: 1.5;
+                                tab-size: 4;
+                                font-size: 14px;
+                                border: 1px solid #3e3e3e;
+                            }
+                            code {
+                                font-family: 'Consolas', 'Courier New', monospace;
+                            }
+                            .notification {
+                                position: fixed;
+                                top: 20px;
+                                right: 20px;
+                                background: #28a745;
+                                color: white;
+                                padding: 10px 20px;
+                                border-radius: 4px;
+                                display: none;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="header">
+                            <h2>📝 HTML 소스 코드 - ${fileName}</h2>
+                            <button class="copy-btn" onclick="copySource()">📋 전체 복사</button>
+                        </div>
+                        <pre><code id="sourceCode"></code></pre>
+                        <div id="notification" class="notification">복사되었습니다!</div>
+                        <script>
+                            // HTML 특수문자 이스케이프
+                            function escapeHtml(text) {
+                                const map = {
+                                    '&': '&amp;',
+                                    '<': '&lt;',
+                                    '>': '&gt;',
+                                    '"': '&quot;',
+                                    "'": '&#039;'
+                                };
+                                return text.replace(/[&<>"']/g, m => map[m]);
+                            }
+
+                            // 소스 코드 표시
+                            const sourceCode = ${JSON.stringify(html)};
+                            document.getElementById('sourceCode').innerHTML = escapeHtml(sourceCode);
+
+                            // 복사 기능
+                            function copySource() {
+                                navigator.clipboard.writeText(sourceCode).then(() => {
+                                    const notification = document.getElementById('notification');
+                                    notification.style.display = 'block';
+                                    setTimeout(() => {
+                                        notification.style.display = 'none';
+                                    }, 2000);
+                                });
+                            }
+                        </script>
+                    </body>
+                    </html>
+                `);
+                newWindow.document.close();
+            } catch (error) {
+                console.error('소스 보기 오류:', error);
+                showNotification('HTML 소스를 불러오는 중 오류가 발생했습니다.', 'error');
+            }
         }
 
         // 임시 저장된 포스트 복원
